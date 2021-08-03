@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urna Eletrônica</title>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Eleições 2022 - Presidente da República</h1>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <p><b>Siga as instruções:</b></p>
+      <ol>
+        <li>Digite o número do candidato;</li>
+        <li>Verifique o nome e a foto que aparecer na tela;</li>
+        <li>Se estiver certo, aperte o botão "confirmar";</li>
+        <li>Se não, aperte o botão "cancelar" e digite novamente;</li>
+        <li>Caso seu voto seja em branco, apenas aperte o botão "branco".</li>
+      </ol>
+    </section>
+
+    <section>
+      <form action="" onsubmit="alert('FIM')">
+        <fieldset>
+          <legend><b>Candidato 2022 - Presidente da República</b></legend>
+          <br>
+
+          <label for="select">Nº eleitoral do candidato: </label>
+          <select name="" id="select">
+          <option value="candidato 00" selected disabled hidden>00</option>
+          <option value="candidato 01">01</option>
+          <option value="candidato 02">02</option>
+          <option value="candidato 03">03</option>
+          </select>
+          <br><br>
+
+          <label for="nameUser">Nome do candidato: </label>
+          <input type="text" id="nameUser" name="nameUser" placeholder="Nome do candidato" size="30">
+          <br><br>
+
+          <label for="imgCandidate">Foto do candidato: </label>
+          <img src="images/candidato00.jpg" id="imgCandidate" alt="Candidato 00" width="128" height="128">
+          <br><br>
+
+          <button type="submit">Confirmar</button>
+          <button type="reset">Cancelar</button>
+          <button type="submit">Branco</button>
+          <br><br>
+            
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Eleições 2022</p>
+  </footer>
+  
+</body>
+</html>
