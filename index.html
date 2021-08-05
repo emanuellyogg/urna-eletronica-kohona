@@ -4,18 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Urna Eletrônica</title>
 </head>
 <body>
 
   <header>
     <div>
-      <h1>Eleições 2022 - Presidente da República</h1>
+    </div>
+    <div>
+      <h1>Eleições 2022 <br> Presidente da República</h1>
     </div>
   </header>
-
+  
   <main>
-    <section>
+    <section class="instru">
       <p><b>Siga as instruções:</b></p>
       <ol>
         <li>Digite o número do candidato;</li>
@@ -27,32 +30,34 @@
     </section>
 
     <section>
-      <form action="" onsubmit="alert('FIM')">
-        <fieldset>
-          <legend><b>Candidato 2022 - Presidente da República</b></legend>
-          <br>
+      <form action="" onsubmit="alert('FIM')" >
+        <fieldset class="form">
+          <legend><b>Votação</b></legend>          
 
           <label for="select">Nº eleitoral do candidato: </label>
           <select name="" id="select">
-          <option value="candidato 00" selected disabled hidden>00</option>
-          <option value="candidato 01">01</option>
-          <option value="candidato 02">02</option>
-          <option value="candidato 03">03</option>
+            <option value="candidato 00" selected disabled hidden>00</option>
+            <option value="candidato 01">01</option>
+            <option value="candidato 02">02</option>
+            <option value="candidato 03">03</option>
           </select>
-          <br><br>
-
+          <br>
+          
           <label for="nameUser">Nome do candidato: </label>
           <input type="text" id="nameUser" name="nameUser" placeholder="Nome do candidato" size="30">
-          <br><br>
+          <br>
 
-          <label for="imgCandidate">Foto do candidato: </label>
-          <img src="images/candidato00.jpg" id="imgCandidate" alt="Candidato 00" width="128" height="128">
-          <br><br>
-
-          <button type="submit">Confirmar</button>
-          <button type="reset">Cancelar</button>
-          <button type="submit">Branco</button>
-          <br><br>
+          <div class="photo">
+            <label for="imgCandidate">Foto do candidato: </label><br>
+            <img src="images/candidato00.jpg" id="imgCandidate" alt="Candidato 00" width="128" height="128">
+            <br>
+          </div>
+          
+          <div class="action">
+            <button type="reset" class="btn btn-canc">Cancelar</button>
+            <button type="submit" class="btn btn-white">Branco</button>
+            <button type="submit" class="btn btn-conf">Confirmar</button>
+          </div>
             
         </fieldset>
       </form>

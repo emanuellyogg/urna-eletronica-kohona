@@ -1,0 +1,120 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(234, 236, 71);
+}
+
+h1 {
+  margin: 10px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  text-align: center;
+  width: 100%;
+} 
+
+header div:first-child {
+  background-image: url(../images/brasil.png);
+  background-size: contain;
+  width: 100%;
+  height: 120px;
+  position: relative;
+  float: left;
+  opacity: .4;
+}
+header div:last-child {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  top: 0px;
+  margin-left: 0px;
+}
+
+.instru {
+  width: 500px;
+  margin: auto;
+  font-size: 12px;
+}
+
+legend {
+  background-color: rgb(22, 197, 22);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.596);
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: white;
+  padding: 2px 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
+  border-style: dotted;
+  border-color: rgb(41, 3, 253);
+}
+
+.form {
+  background-color: rgb(22, 197, 22);
+  border-style: dotted;
+  border-color: rgb(41, 3, 253);
+  border-radius: 10px;
+  width: 500px;
+  padding: 10px;
+  margin: auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.596);
+  
+}
+
+label ~ input, label ~ select, label ~ div {
+  margin-top: 10px;
+  padding: 3px;
+  border: 10px;
+  border-radius: 5px;
+}
+
+label {
+  color: white; 
+}
+
+.photo {
+  text-align: center;
+  padding: 5px;
+  margin: 20px;
+}
+
+img {
+  border-radius: 100%;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin: 8px 5px 5px 5px;
+  border: none;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: rgb(201, 201, 201);
+}
+
+.action {
+  text-align: center;
+}
+
+.btn-canc:hover {
+  color: rgb(238, 106, 45);
+}
+
+.btn-conf:hover {
+  color: rgb(22, 197, 22);
+}
+
+.btn-white:hover {
+  color: rgb(255, 255, 255);
+}
+
+footer {
+  color: rgb(66, 66, 66);
+  text-align: center;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(66, 66, 66, 0.596);
+}
