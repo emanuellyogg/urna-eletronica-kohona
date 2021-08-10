@@ -4,69 +4,106 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <title>Urna Eletrônica</title>
 </head>
 <body>
 
   <header>
-    <div>
-    </div>
-    <div>
-      <h1>Eleições 2022 <br> Presidente da República</h1>
+    <div class="container-fluid my-4">
+      <h1 class="text-center p-2 my-4">Eleições 2022 Presidente da República</h1>
     </div>
   </header>
-  
+
   <main>
-    <section class="instru">
-      <p><b>Siga as instruções:</b></p>
-      <ol>
-        <li>Digite o número do candidato;</li>
-        <li>Verifique o nome e a foto que aparecer na tela;</li>
-        <li>Se estiver certo, aperte o botão "confirmar";</li>
-        <li>Se não, aperte o botão "cancelar" e digite novamente;</li>
-        <li>Caso seu voto seja em branco, apenas aperte o botão "branco".</li>
-      </ol>
-    </section>
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-md-6 p-4 bg-warning rounded-3">
+            <section>
+              <h2 class="text-start fw-bold ">Siga as instruções:</h2>
+              <ol class="list-group list-group-numbered list-group-flush rounded-3">
+                <li class="list-group-item">Digite o número do candidato;</li>
+                <li class="list-group-item">Verifique o nome e a foto que aparecer na tela;</li>
+                <li class="list-group-item">Se estiver certo, aperte o botão "confirmar";</li>
+                <li class="list-group-item">Se não, aperte o botão "cancelar" e digite novamente;</li>
+                <li class="list-group-item">Caso seu voto seja em branco, apenas aperte o botão "branco".</li>
+              </ol>
+            </section>
+        </div>
 
-    <section>
-      <form action="" onsubmit="alert('FIM')" >
-        <fieldset class="form">
-          <legend><b>Votação</b></legend>          
-
-          <label for="select">Nº eleitoral do candidato: </label>
-          <select name="" id="select">
-            <option value="candidato 00" selected disabled hidden>00</option>
-            <option value="candidato 01">01</option>
-            <option value="candidato 02">02</option>
-            <option value="candidato 03">03</option>
-          </select>
-          <br>
-          
-          <label for="nameUser">Nome do candidato: </label>
-          <input type="text" id="nameUser" name="nameUser" placeholder="Nome do candidato" size="30">
-          <br>
-
-          <div class="photo">
-            <label for="imgCandidate">Foto do candidato: </label><br>
-            <img src="images/candidato00.jpg" id="imgCandidate" alt="Candidato 00" width="128" height="128">
-            <br>
+        <div class="col-md-6">
+            <section>
+            <div class="row">
+              
+              <div class="p-4 bg-primary bg-gradient rounded-3">
+                <form action="">
+                  
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Nº do candidato:</span>
+                    </div>
+                    <input type="number" class="form-control" min="0" max="99" placeholder="Digite o número">
+                  </div>
+                  
+                  <div>
+                    <p class="text-start fw-bold ps-3">Ou</p>
+                  </div>
+                  
+                  <div class="input-group mb-4 mt-3">
+                    <label for="select-cand" class="input-group-text">Nº do candidato: </label>
+                    <select name="" id="select-cand" class="form-select">
+                      <option selected>Escolher...</option>
+                      <option value="candidato 01">01</option>
+                      <option value="candidato 02">02</option>
+                      <option value="candidato 03">03</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label for="nameUser" class="form-label mt-2">Nome do candidato: </label>
+                    <input type="text" class="form-control mb-4" id="nameUser" name="nameUser" placeholder="Nome do candidato">
+                  </div>
+                  
+                  <div>
+                    <label for="imgCandidate" class="form-label mt-2">Foto do candidato: </label>
+                    <img src="images/candidato00.jpg" class="rounded mx-auto d-block " id="imgCandidate" alt="Candidato 00" width="128" height="128">
+                    <br>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="d-flex justify-content-center">
+                      <button type="reset" class="btn btn-danger mx-2 ">Cancelar</button>
+                      <button type="submit" class="btn btn-light mx-2">Branco</button>
+                      <button type="submit" class="btn btn-success mx-2">Confirmar</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>         
+          </section>
           </div>
-          
-          <div class="action">
-            <button type="reset" class="btn btn-canc">Cancelar</button>
-            <button type="submit" class="btn btn-white">Branco</button>
-            <button type="submit" class="btn btn-conf">Confirmar</button>
-          </div>
-            
-        </fieldset>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; Eleições 2022</p>
-  </footer>
+      </div>
+    </div>
   
+
+    </main>
+
+  <div class="container">
+    <p class="text-center p-2 my-0">&copy; Eleições 2022</p>
+  </div>
+  
+  <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
 </body>
 </html>
