@@ -28,13 +28,13 @@ function countVotes() {
       break;
   }
   showResult()
-
-  // limpar o nome e a foto do candidato
+  limparTela()
 }
 
 function countWhite() {
   votoBranco++
   showResult()
+  limparTela()
 }
 
 function showResult() {
@@ -92,4 +92,8 @@ function fotoCandidato() {
   nomeCand.value = candidato;
 }
 
-// criar função limpar a tela - será chamado quando confirmar voto, voto em branco e btn-reset;
+function limparTela(){
+  document.getElementById("NmCandidato").value = ""
+  document.getElementById("imgCandidate").src = "images/candidato00.jpg"
+  document.querySelector("#idNumCand").value = ""
+}
