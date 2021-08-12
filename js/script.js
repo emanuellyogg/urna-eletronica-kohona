@@ -34,18 +34,24 @@ function countVotes() {
 
 function countWhite() {
   votoBranco++
-
   showResult()
 }
 
 function showResult() {
-  console.log({votoCand11});
-  console.log({votoCand12});
-  console.log({votoCand13});
-  console.log({votoBranco});
-  console.log({votoNulo});
-  
+  let totalCand11 = document.querySelector("#showResCand11");
+  totalCand11.innerHTML = `Jiraiya Sensei: ${votoCand11}` ;
 
+  let totalCand12 = document.querySelector("#showResCand12");
+  totalCand12.innerHTML = `Kakashi Hatake: ${votoCand12}` ;
+
+  let totalCand13 = document.querySelector("#showResCand13");
+  totalCand13.innerHTML = `Shikamaru Nara: ${votoCand13}` ;
+
+  let totalBranco = document.querySelector("#showResWhite");
+  totalBranco.innerHTML = `Votos em Branco: ${votoBranco}` ;
+
+  let totalNulo = document.querySelector("#showesNullo");
+  totalNulo.innerHTML = `Votos Nulo: ${votoNulo}` ;
 }
 
 function fotoCandidato() {
