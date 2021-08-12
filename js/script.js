@@ -1,4 +1,3 @@
-
 var votoCand11 = 0;
 var votoCand12 = 0;
 var votoCand13 = 0;
@@ -27,14 +26,14 @@ function countVotes() {
       }
       break;
   }
-  showResult()
-  limparTela()
+  showResult();
+  limparTela();
 }
 
 function countWhite() {
   votoBranco++
-  showResult()
-  limparTela()
+  showResult();
+  limparTela();
 }
 
 function showResult() {
@@ -63,27 +62,26 @@ function fotoCandidato() {
   switch (numCand) {
     case 11:
       foto = "jiraiya.jpg";
-      candidato = "Jiraiya Sensei"
+      candidato = "Jiraiya Sensei";
       break;
     case 12:
       foto = "kakashi.jpg";
-      candidato = "Kakashi Hatake"
+      candidato = "Kakashi Hatake";
       break;
     case 13:
       foto = "shikamaru.jpg";
-      candidato = "Shikamaru Nara"
+      candidato = "Shikamaru Nara";
       break;      
     default:
       if (numCand == "") {
         foto = "branco.png";
-      candidato = "Voto em Branco"
+      candidato = "Voto em Branco";
       } else {
         foto = "nulo.png";
-      candidato = "Voto Nulo"
+      candidato = "Voto Nulo";
       }
       break;
   }
-
 
   let img = document.querySelector("#imgCandidate");
   img.src = "images/" + foto;
@@ -93,7 +91,7 @@ function fotoCandidato() {
 }
 
 function limparTela(){
-  document.getElementById("NmCandidato").value = ""
-  document.getElementById("imgCandidate").src = "images/candidato00.jpg"
-  document.querySelector("#idNumCand").value = ""
+  document.querySelector("#NmCandidato").value = "";
+  document.querySelector("#imgCandidate").src = "images/candidato00.jpg";
+  document.querySelector("#idNumCand").value = "";
 }
