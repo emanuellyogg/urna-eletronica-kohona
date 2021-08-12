@@ -29,8 +29,8 @@
                 <form action="">
                   <div class="input-group mb-4 mt-3">
                     <label for="idNumCand" class="input-group-text">Nº do candidato: </label>
-                    <input list="idNumCandid" id="idNumCand" class="form-input" autocomplete="off" required>
-                    <datalist id="idNumCandid">
+                    <input list="idNumCandid" id="idNumCand" class="form-select" autocomplete="off" required>
+                    <datalist id="idNumCandid" >
                       <option value="11">11</option>
                       <option value="12">12</option>
                       <option value="13">13</option>
@@ -39,7 +39,7 @@
                   
                   <div class="my-4">
                     <label for="nameUser" class="form-label my-2">Nome do candidato: </label>
-                    <output id="NmCandidato"></output>
+                    <output id="NmCandidato" class="fs-3 fw-bold"></output>
                   </div>
                   
                   <div>
@@ -47,6 +47,11 @@
                     <br>
                   </div>
                   
+                  <div class="container mb-4 text-center">
+                    <button type="button" id="btn-candidato" class="btn btn-warning mx-2" onclick="fotoCandidato()">Visualizar Candidato</button>
+
+                  </div>
+
                   <div class="row">
                     <div class="d-flex justify-content-center">
                       <button type="reset" id="btn-cancel" class="btn btn-danger mx-2 ">Cancelar</button>
