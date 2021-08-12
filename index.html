@@ -21,80 +21,62 @@
   <main>
     <div class="container my-4">
       <div class="row">
-        <div class="col-md-6 p-4 bg-warning rounded-3">
-            <section>
-              <h2 class="text-start fw-bold ">Siga as instruções:</h2>
-              <ol class="list-group list-group-numbered list-group-flush rounded-3">
-                <li class="list-group-item">Digite o número do candidato;</li>
-                <li class="list-group-item">Verifique o nome e a foto que aparecer na tela;</li>
-                <li class="list-group-item">Se estiver certo, aperte o botão "confirmar";</li>
-                <li class="list-group-item">Se não, aperte o botão "cancelar" e digite novamente;</li>
-                <li class="list-group-item">Caso seu voto seja em branco, apenas aperte o botão "branco".</li>
-              </ol>
-            </section>
-        </div>
 
-        <div class="col-md-6">
-            <section>
+        <div class="col-md-6 ">
+          <section>
             <div class="row">
-              
               <div class="p-4 bg-primary bg-gradient rounded-3">
                 <form action="">
-                  
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">Nº do candidato:</span>
-                    </div>
-                    <input type="number" class="form-control" min="0" max="99" placeholder="Digite o número">
-                  </div>
-                  
-                  <div>
-                    <p class="text-start fw-bold ps-3">Ou</p>
-                  </div>
-                  
                   <div class="input-group mb-4 mt-3">
-                    <label for="select-cand" class="input-group-text">Nº do candidato: </label>
-                    <select name="" id="select-cand" class="form-select">
-                      <option selected>Escolher...</option>
-                      <option value="candidato 01">01</option>
-                      <option value="candidato 02">02</option>
-                      <option value="candidato 03">03</option>
-                    </select>
+                    <label for="idNumCand" class="input-group-text">Nº do candidato: </label>
+                    <input list="idNumCandid" id="idNumCand" class="form-input" autocomplete="off" required>
+                    <datalist id="idNumCandid">
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                    </datalist>
+                  </div>
+                  
+                  <div class="my-4">
+                    <label for="nameUser" class="form-label my-2">Nome do candidato: </label>
+                    <output id="NmCandidato"></output>
                   </div>
                   
                   <div>
-                    <label for="nameUser" class="form-label mt-2">Nome do candidato: </label>
-                    <input type="text" class="form-control mb-4" id="nameUser" name="nameUser" placeholder="Nome do candidato">
-                  </div>
-                  
-                  <div>
-                    <label for="imgCandidate" class="form-label mt-2">Foto do candidato: </label>
-                    <img src="images/candidato00.jpg" class="rounded mx-auto d-block " id="imgCandidate" alt="Candidato 00" width="128" height="128">
+                    <img src="images/candidato00.jpg" class="rounded mx-auto d-block " id="imgCandidate" alt="Candidato 00" width="200" height="200">
                     <br>
                   </div>
                   
                   <div class="row">
                     <div class="d-flex justify-content-center">
-                      <button type="reset" class="btn btn-danger mx-2 ">Cancelar</button>
-                      <button type="submit" class="btn btn-light mx-2">Branco</button>
-                      <button type="submit" class="btn btn-success mx-2">Confirmar</button>
+                      <button type="reset" id="btn-cancel" class="btn btn-danger mx-2 ">Cancelar</button>
+                      <button type="button" id="btn-white" class="btn btn-light mx-2" onclick="countWhite();">Branco</button>
+                      <button type="button" id="btn-confirm" class="btn btn-success mx-2" onclick="countVotes()">Confirmar</button>
                     </div>
                   </div>
+
                 </form>
               </div>
             </div>         
           </section>
+        </div>
+        <div class="col-md-6 bg-info bg-gradient rounded-3">
+          <div class="container mt-4  bg-light p-3 rounded-3">
+            <p class="text-center fw-bold">Total de votos:</p>
+            <p id="showresCand11">Candidato 11:</p>
+            <p id="showresCand12">Candidato 12:</p>
+            <p id="showresCand13">Candidato 13:</p>
+            <p id="showresWhite">Votos em branco:</p>
+            <p id="showresWhite">Votos Nulo:</p>
+            <p class="fw-bold" id="showresWinner">Candidato eleito:</p>
           </div>
+
+        </div>
       </div>
     </div>
-  
+  </main>
 
-    </main>
 
-  <div class="container">
-    <p class="text-center p-2 my-0">&copy; Eleições 2022</p>
-  </div>
-  
   <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -105,5 +87,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     -->
+
+    <script src="js/script.js"></script>
 </body>
 </html>
